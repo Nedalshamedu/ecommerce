@@ -1,10 +1,15 @@
-import 'package:ecommerce/core/constant/colorapp.dart';
-import 'package:ecommerce/routes.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'view/screen/onboarding.dart';
+import 'package:flutter/material.dart';
+import 'package:ecommerce/routes.dart';
+import 'package:ecommerce/view/screen/language.dart';
+import 'package:ecommerce/core/services/services.dart';
+import 'package:ecommerce/core/constant/colorapp.dart';
+import 'package:ecommerce/core/localization/changelocal.dart';
+import 'package:ecommerce/core/localization/translation.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initServices();
   runApp(const MyApp());
 }
 
@@ -14,7 +19,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    LocalController controller = Get.put(LocalController());
     return GetMaterialApp(
+      translations: MyTranslation(),
+      locale: controller.language,
       debugShowCheckedModeBanner: false,
       title: 'Ecommerce App',
       theme: ThemeData(
@@ -22,11 +30,13 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headlineMedium: TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: AppColor.black),
+          headlineLarge: TextStyle(
+              fontSize: 26, fontWeight: FontWeight.bold, color: AppColor.black),
           bodyMedium: TextStyle(height: 2, color: AppColor.gray, fontSize: 20),
         ),
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoarding(),
+      home: const Language(),
       routes: routes,
     );
   }
