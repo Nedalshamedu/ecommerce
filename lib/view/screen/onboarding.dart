@@ -1,6 +1,6 @@
-import 'package:ecommerce/core/constant/colorapp.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:ecommerce/core/constant/colorapp.dart';
 import 'package:ecommerce/controller/onboardingcontroller.dart';
 import 'package:ecommerce/view/widget/onboarding/customslider.dart';
 import 'package:ecommerce/view/widget/onboarding/custombutton.dart';
@@ -18,7 +18,7 @@ class OnBoarding extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 3,
+              flex: 4,
               child: CustomSliderOnboarding(),
             ),
             Expanded(
