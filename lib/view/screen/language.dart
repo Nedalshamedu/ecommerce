@@ -1,8 +1,8 @@
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'package:ecommerce/core/constant/routes.dart';
 import 'package:ecommerce/core/localization/changelocal.dart';
 import 'package:ecommerce/view/widget/language/custombuttonlang.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class Language extends GetView<LocalController> {
   const Language({super.key});
@@ -42,11 +42,3 @@ class Language extends GetView<LocalController> {
     );
   }
 }
-
-/*
- MaterialButton(
-              onPressed: () {},
-              child: const Text("Arabic"),
-            ),
-
-*/

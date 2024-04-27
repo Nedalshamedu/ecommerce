@@ -1,7 +1,7 @@
-import 'package:ecommerce/controller/onboardingcontroller.dart';
-import 'package:ecommerce/core/constant/colorapp.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'package:ecommerce/core/constant/colorapp.dart';
+import 'package:ecommerce/controller/onboarding_controller.dart';
 
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
   const CustomButtonOnBoarding({super.key});
@@ -18,9 +18,9 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
         onPressed: () {
           controller.next();
         },
-        child: const Text(
-          "Continue",
-          style: TextStyle(fontSize: 18),
+        child: Text(
+          "8".tr,
+          style: const TextStyle(fontSize: 18),
         ),
       ),
     );

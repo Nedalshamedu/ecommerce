@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/core/constant/colorapp.dart';
 import 'package:ecommerce/data/datasource/static/static.dart';
-import 'package:ecommerce/controller/onboardingcontroller.dart';
+import 'package:ecommerce/controller/onboarding_controller.dart';
 
 class CustomDotControllerOnBoarding extends StatelessWidget {
   const CustomDotControllerOnBoarding({super.key});

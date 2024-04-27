@@ -1,9 +1,7 @@
+import 'package:ecommerce/routes.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/routes.dart';
-import 'package:ecommerce/view/screen/language.dart';
 import 'package:ecommerce/core/services/services.dart';
-import 'package:ecommerce/core/constant/colorapp.dart';
 import 'package:ecommerce/core/localization/changelocal.dart';
 import 'package:ecommerce/core/localization/translation.dart';
 
@@ -25,19 +23,8 @@ class MyApp extends StatelessWidget {
       locale: controller.language,
       debugShowCheckedModeBanner: false,
       title: 'Ecommerce App',
-      theme: ThemeData(
-        fontFamily: "PlayfairDisplay",
-        textTheme: const TextTheme(
-          headlineMedium: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: AppColor.black),
-          headlineLarge: TextStyle(
-              fontSize: 26, fontWeight: FontWeight.bold, color: AppColor.black),
-          bodyMedium: TextStyle(height: 2, color: AppColor.gray, fontSize: 20),
-        ),
-        primarySwatch: Colors.blue,
-      ),
-      home: const Language(),
-      routes: routes,
+      theme: controller.apptheme,
+      getPages: routes,
     );
   }
 }
